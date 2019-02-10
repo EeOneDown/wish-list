@@ -79,7 +79,7 @@ class ItemInfo(QMainWindow):
         self.parent().update()
 
 
-class MyWin(QMainWindow):
+class MainWin(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent=parent)
         self.ui = Ui_MainWindow()
