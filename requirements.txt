@@ -1,2 +1,5 @@
+PyMySQL==0.9.3
 PyQt5==5.12
 PyQt5-sip==4.19.14
+python-dotenv==0.10.1
+SQLAlchemy==1.2.17
