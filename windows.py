@@ -21,7 +21,7 @@ class ItemInfo(QMainWindow):
         self.setWindowTitle("New Wish")
 
     def set_from_item(self, item: QListWidgetItem):
-        _id = int(item.text().split(". "))
+        _id = int(item.text().split(". ")[0])
         self.wish = self.parent().WishInterface.get(_id)
 
         self.setWindowTitle(f"Wish: {self.wish.title}")
@@ -47,6 +47,8 @@ class ItemInfo(QMainWindow):
                 float(self.ui.priceLE.text())
             except ValueError:
                 return self._raise_msg("Price must be float!")
+            if float(self.ui.priceLE.text()) < 0:
+                return self._raise_msg("Price must be >= 0!")
 
         if not self.wish:
             try:
